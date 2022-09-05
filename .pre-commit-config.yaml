@@ -1,0 +1,36 @@
+ci:
+  autofix_commit_msg: "ci(pre-commit): autofix"
+  autoupdate_commit_msg: "ci(pre-commit): autoupdate"
+
+repos:
+  - repo: https://github.com/kenji-miyake/ament_lint
+    rev: add-pre-commit
+    hooks:
+      - id: ament_clang_format
+        files: ament_clang_format/pass/.*
+      - id: ament_clang_tidy
+        files: ament_clang_tidy/pass/.*
+      - id: ament_copyright
+        files: ament_copyright/pass/.*
+      - id: ament_cppcheck
+        files: ament_cppcheck/pass/.*
+      - id: ament_cpplint
+        files: ament_cpplint/pass/.*
+      - id: ament_flake8
+        files: ament_flake8/pass/.*
+      - id: ament_lint_cmake
+        files: ament_lint_cmake/pass/.*
+      - id: ament_mypy
+        files: ament_mypy/pass/.*
+      - id: ament_pclint
+        files: ament_pclint/pass/.*
+      - id: ament_pep257
+        files: ament_pep257/pass/.*
+      - id: ament_pycodestyle
+        files: ament_pycodestyle/pass/.*
+      - id: ament_pyflakes
+        files: ament_pyflakes/pass/.*
+      - id: ament_uncrustify
+        files: ament_uncrustify/pass/.*
+      - id: ament_xmllint
+        files: ament_xmllint/pass/.*
